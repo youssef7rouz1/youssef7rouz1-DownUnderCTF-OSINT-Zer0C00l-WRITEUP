@@ -15,7 +15,7 @@ Coming back to our MP3 file: in the first part (modem dials) we can hear seven d
 Next, we use ffmpeg (a powerful command line tool for processing audio and video) to extract the first few seconds of the file ( 2 seconds ), isolating just the dialing segment.
 
   ```bash
-ffmpeg -i Zer0C00l.mp3  -t 2 dialing.raw
+ffmpeg -i Zer0C00l.mp3  -t 2 dialing.wav
 ```
 We then decode those tones with multimon ng (a command line utility for decoding various digital modem signals, including DTMF). This yields the sequence 369 3244, which we format in full international style as 61-2-369-3244.
 
